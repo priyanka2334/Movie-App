@@ -1,0 +1,41 @@
+.footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Centered text */
+  }
+  
+  .footer-links {
+    list-style: none; /* No bullet points */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+  }
+  
+  .footer-links li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Space between links */
+  }
+  
+  .footer-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .social-media {
+    margin: 10px 0; /* Margin for social media links */
+  }
+  
+  .social-media a {
+    color: white; /* Social media link color */
+    margin: 0 10px; /* Space between social media links */
+  }
+  
+  .footer-copy {
+    margin-top: 10px; /* Space above copyright text */
+    font-size: 14px; /* Font size for copyright */
+  }
+  

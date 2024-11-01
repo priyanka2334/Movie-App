@@ -1,0 +1,146 @@
+/* Movies List */
+.movies-list {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 100px;
+  /* border: 2px solid rgb(48, 150, 48); */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movie-item {
+  margin: 10px;
+  padding: 10px;
+  /* border: 1px solid #c02929; */
+  border-radius: 10px;
+  max-width: 290px;
+  height: 450px;
+  text-align: center;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  transition: transform 0.2s; 
+  animation: fadeIn 0.5s; 
+}
+
+.movie-item:hover {
+  transform: scale(1.05); 
+}
+
+.movie-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Pagination button styles */
+.pagination {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin: 20px 0; 
+}
+
+.next {
+  padding: 10px 20px; 
+  height: 50px; 
+  width: 100px; 
+  background-color: rgb(95, 117, 103); 
+  color: bisque; /* Ensure consistent text color */
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.2s; 
+  font-size: 20px; 
+}
+
+.next:hover {
+  background-color: rgb(80, 100, 90); 
+  color: bisque; /* Maintain consistent text color */
+}
+
+.next:disabled {
+  background-color: rgba(95, 117, 103, 0.5); 
+  color: bisque; /* Maintain consistent text color */
+  cursor: not-allowed; 
+}
+
+
+/* Pagination container styles */
+.pagination {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+/* Heading styles */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wishlist-heart {
+  font-size: 40px; /* Adjust the size */
+  cursor: pointer;
+}
+
+
+/* Responsive styles */
+@media (min-width: 320px) and (max-width: 480px) {
+  .movie-item {
+      flex: 1 1 100%; 
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .movie-item {
+      flex: 1 1 45%; 
+  }
+}
+
+@media (min-width: 769px) {
+  .movie-item {
+      flex: 1 1 20%; 
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
