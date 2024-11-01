@@ -1,4 +1,4 @@
-
+/* 
 
    .header {
     background-color: #333; 
@@ -15,7 +15,7 @@
     font-size: 24px;      
 }
 
-/* Move hamburger to the right */
+
 .hamburger {
     display: none; 
     font-size: 28px; 
@@ -23,10 +23,10 @@
     border: none;
     color: white;
     cursor: pointer;
-    margin-left: auto; /* Add this line to push hamburger to the right */
+    margin-left: auto; 
 }
 
-/* Navigation styles */
+
 .nav {
     display: flex; 
 }
@@ -56,7 +56,7 @@ nav a:hover {
     color: #ffa500;       
 }
 
-/* Search bar styles */
+
 .search-bar {
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@ nav a:hover {
     width: 500px; 
 }
 
-/* Styles for the second header (nav1) */
+
 .nav1 {
     display: none; 
     background-color: #444; 
@@ -114,7 +114,7 @@ nav a:hover {
     color: #ffa500;       
 }
 
-/* Responsive styles */
+/
 @media (max-width: 768px) {
     .hamburger {
         display: block; 
@@ -140,9 +140,9 @@ nav a:hover {
     }
 }
 
-/* CSS for the second header (nav1) */
+
 .nav1 {
-    display: none; /* Initially hidden */
+    display: none; 
     background-color: #444; 
     padding: 30px;  
     flex-direction: column; 
@@ -154,17 +154,208 @@ nav a:hover {
 }
 
 .nav1.active {
-    display: flex; /* Show when active */
+    display: flex; 
 }
 
 
 
 
 .nav1 {
-    display: none; /* or some styles that could hide it */
+    display: none; 
 }
 .nav1.active {
-    display: block; /* or whatever styles you want to show it */
+    display: block; 
 }
 
+ */
 
+
+
+
+
+
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Hamburger button styling */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Main navigation styling */
+.nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav.active {
+    display: block;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    padding: 10px 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputBox {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Genre menu styling */
+.genre-menu {
+    /* margin: 10px 20px; */
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation styles */
+.nav1 {
+    display: flex;
+    position: absolute;
+    background-color: #333; /* Background color for mobile view */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px; /* Base font size */
+}
+
+.nav1.active {
+    display: block;
+    background-color: #333; /* Background color when active */
+}
+
+/* Second header styles */
+.second-header {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flex for better alignment */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center align items */
+}
+
+.second-header li {
+    padding: 10px 20px;
+    font-size: 50px; /* Base font size for mobile */
+}
+
+.second-header li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+.second-header li a:hover {
+    background-color: #444;
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+    .nav1 {
+        flex-direction: column; /* Stack items on small screens */
+        height: auto; /* Adjust height for content */
+    }
+
+    .second-header {
+        flex-direction: column; /* Stack items for mobile view */
+        align-items: center; /* Center items */
+    }
+
+    .second-header li {
+        font-size: 30px; /* Smaller font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .second-header li a {
+        font-size: 20px; /* Smaller link font size */
+    }
+}
+
+@media (min-width: 768px) {
+    .nav, .nav1 {
+        display: flex;
+        position: static; /* Keep nav static on larger screens */
+        background-color: #333; /* Background color for desktop view */
+        box-shadow: none;
+    }
+
+    .nav ul, .second-header {
+        display: flex;
+        gap: 15px; /* Space between items */
+    }
+
+    .nav ul li, .second-header li {
+        padding: 0; /* Reset padding */
+    }
+
+    .nav ul li a, .second-header li a {
+        color: #fff;
+        font-size: 18px; /* Adjust link font size for desktop */
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+}

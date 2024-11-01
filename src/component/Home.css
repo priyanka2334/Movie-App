@@ -1,67 +1,85 @@
 /* login css */
 
 
+/* General styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f5; /* Light background for contrast */
+}
+
+/* Login Container styling */
 .login-container {
     max-width: 400px;
     margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    padding: 30px; /* Increased padding for a more spacious feel */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient background */
     width: 90%; 
 }
 
+/* Heading styling */
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased bottom margin for spacing */
     color: #333;
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
 }
 
+/* Form group styling */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
+/* Label styling */
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
     color: #555;
 }
 
+/* Input field styling */
 .input {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for comfort */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
 }
 
 .input:focus {
     border-color: #007bff;
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
 }
 
+/* Login button styling */
 .login {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding */
     background-color: #007bff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
-    font-size: 16px;
+    font-size: 18px; /* Increased font size for emphasis */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for hover effect */
 }
 
 .login:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Message styling */
 .message {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px; /* Increased margin for spacing */
 }
 
 .message a {
@@ -76,159 +94,155 @@ label {
 /* Responsive Styles */
 @media (max-width: 600px) {
     .login-container {
-        padding: 15px;
+        padding: 20px; /* Adjusted padding */
     }
 
     h2 {
-        font-size: 1.5rem; 
+        font-size: 1.7rem; /* Adjusted font size for smaller screens */
     }
 
     .input, .login {
         font-size: 14px; 
-        padding: 8px; 
+        padding: 10px; /* Adjusted padding */
     }
 }
 
 @media (max-width: 400px) {
     h2 {
-        font-size: 1.3rem; 
+        font-size: 1.4rem; /* Adjusted font size for very small screens */
     }
 
     .input, .login {
         font-size: 12px; 
-        padding: 6px; 
+        padding: 8px; /* Adjusted padding */
     }
 }
-
 
 /* contact sytle */
 
 
 .contact-container {
     max-width: 500px;
-    margin:50px auto;
-    padding: 20px;
+    margin: 50px auto; /* Centering the container with vertical spacing */
+    padding: 30px; /* Increased padding for more breathing room */
     border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    width: 90%; 
+    border-radius: 12px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more elevated appearance */
+    background-color: #f9f9f9; /* Light background for contrast */
+    width: 90%;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-container:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased margin for better spacing */
     color: #333;
+    font-family: 'Arial', sans-serif; /* Better font styling */
+    font-size: 1.8rem; /* Set a consistent font size */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* More space between form groups */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* Increased margin for better label visibility */
     font-weight: bold;
     color: #555;
 }
 
-.input {
+.input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for comfort */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px; /* Slightly rounded corners for inputs */
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
 }
 
-.input:focus {
-    border-color: #007bff;
+.input:focus, textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
 }
 
 textarea {
-    width: 100%;
-    height: 100px; 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
+    height: 120px; /* Increased height for better usability */
 }
 
 .contact {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for button */
     background-color: #007bff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Rounded corners */
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s; /* Button hover effects */
 }
 
 .contact:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .success-message {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px; /* Increased margin for separation */
     color: green;
 }
 
 .contact-info {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
+    margin-top: 30px; /* Added spacing above the contact info section */
+    padding-top: 20px; /* More padding for the top of this section */
+    border-top: 1px solid #ccc; /* Separator line */
 }
 
 .contact-info h3 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space below the heading */
     color: #333;
 }
 
 .contact-info p {
-    margin: 5px 0;
+    margin: 5px 0; /* Space between paragraphs */
 }
 
 /* Responsive Styles */
 @media (max-width: 600px) {
     .contact-container {
-        padding: 15px;
+        padding: 20px; /* Slightly reduced padding for smaller screens */
     }
 
     h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Responsive heading size */
     }
 
     .input, .contact, textarea {
-        font-size: 14px; 
-        padding: 8px; 
+        font-size: 14px; /* Smaller font size for better fit */
+        padding: 10px; /* Consistent padding */
     }
 
     .contact-info h3 {
-        font-size: 1.3rem; 
+        font-size: 1.3rem; /* Responsive heading size */
     }
 }
 
 @media (max-width: 400px) {
     h2 {
-        font-size: 1.3rem; 
+        font-size: 1.3rem; /* Further reduced heading size */
     }
 
     .input, .contact, textarea {
-        font-size: 12px; 
-        padding: 6px; 
+        font-size: 12px; /* Responsive font size */
+        padding: 8px; /* Reduced padding */
     }
 }
-
 
 /* wishlist style */
 

@@ -1,20 +1,13 @@
 
 
 
-
-
-
-
-
-
-
 // import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import './Header.css';
 
 // const Header = ({ wishlist, setSearchQuery }) => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false); // For main nav
-//   const [isMenu1Open, setIsMenu1Open] = useState(false); // For genres
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isMenu1Open, setIsMenu1Open] = useState(false);
 
 //   const handleSearchChange = (e) => {
 //     setSearchQuery(e.target.value);
@@ -37,7 +30,6 @@
 //         </button>
 //         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
 //           <ul>
-//             <li><Link to="/">Home</Link></li>
 //             <li><Link to="/apipage">TV Shows</Link></li>
 //             <li><Link to="/favorites">Favorites ({wishlist.length})</Link></li>
 //             <li><Link to="/login">Login</Link></li>
@@ -53,9 +45,9 @@
 //           onChange={handleSearchChange} 
 //         />
 //       </div>
-//       <div>
+//       <div className="genre-menu">
 //         <button className="hamburger" onClick={toggleMenu1}>
-//           &#9776; {/* Hamburger icon for second nav (genres) */}
+//           &#9776; 
 //         </button>
 //         <nav className={`nav1 ${isMenu1Open ? 'active' : ''}`}>
 //           <ul className="second-header">
@@ -78,13 +70,16 @@
 
 
 
+// // Header.js
+
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = ({ wishlist, setSearchQuery }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMenu1Open, setIsMenu1Open] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // For main nav
+  const [isMenu1Open, setIsMenu1Open] = useState(false); // For genres
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -103,7 +98,7 @@ const Header = ({ wishlist, setSearchQuery }) => {
       <header className="header">
         <h1>My TV Shows App</h1>
         <button className="hamburger" onClick={toggleMenu}>
-          &#9776; 
+          &#9776;
         </button>
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul>
@@ -124,7 +119,7 @@ const Header = ({ wishlist, setSearchQuery }) => {
       </div>
       <div className="genre-menu">
         <button className="hamburger" onClick={toggleMenu1}>
-          &#9776; 
+          &#9776; {/* Hamburger icon for second nav (genres) */}
         </button>
         <nav className={`nav1 ${isMenu1Open ? 'active' : ''}`}>
           <ul className="second-header">
@@ -144,3 +139,4 @@ const Header = ({ wishlist, setSearchQuery }) => {
 };
 
 export default Header;
+

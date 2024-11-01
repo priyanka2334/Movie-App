@@ -60,18 +60,31 @@ const GenrePage = ({ wishlist, setWishlist, searchQuery }) => {
       <h2>{genre.charAt(0).toUpperCase() + genre.slice(1)} Movies</h2>
       <ul>
         {currentMovies.length > 0 ? (
-          currentMovies.map((movie) => (
-            <li key={movie.id}>
-              {movie.image && (
-                <img 
-                  src={movie.image.medium} 
-                  alt={movie.name} 
-                />
-              )}
-              <h3>{movie.name}</h3>
-              <button onClick={() => addToWishlist(movie)}>Add to Wishlist</button>
-            </li>
-          ))
+          currentMovies.map((movie) => {
+            // Check if the movie is already in the wishlist
+            const isInWishlist = wishlist.some(wish => wish.id === movie.id);
+            return (
+              <li key={movie.id}>
+                {movie.image && (
+                  <img 
+                    src={movie.image.medium} 
+                    alt={movie.name} 
+                  />
+                )}
+                <h3>{movie.name}</h3>
+                <span 
+                  onClick={() => {
+                    if (!isInWishlist) {
+                      addToWishlist(movie);
+                    }
+                  }}
+                  style={{ cursor: 'pointer', fontSize: '24px' }} // Style for heart icon
+                >
+                  {isInWishlist ? '❤️' : '🤍'}
+                </span>
+              </li>
+            );
+          })
         ) : (
           <p>No movies found in this genre.</p>
         )}
