@@ -46,7 +46,7 @@
   height: 50px; 
   width: 100px; 
   background-color: rgb(95, 117, 103); 
-  color: bisque; /* Ensure consistent text color */
+  color: bisque; 
   border: none; 
   border-radius: 5px; 
   cursor: pointer; 
@@ -56,17 +56,17 @@
 
 .next:hover {
   background-color: rgb(80, 100, 90); 
-  color: bisque; /* Maintain consistent text color */
+  color: bisque; 
 }
 
 .next:disabled {
   background-color: rgba(95, 117, 103, 0.5); 
-  color: bisque; /* Maintain consistent text color */
+  color: bisque; 
   cursor: not-allowed; 
 }
 
 
-/* Pagination container styles */
+
 .pagination {
   display: flex; 
   justify-content: center; 
@@ -74,19 +74,19 @@
   gap: 10px; 
 }
 
-/* Heading styles */
+
 .heading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .wishlist-heart {
-  font-size: 40px; /* Adjust the size */
+  font-size: 40px; 
   cursor: pointer;
 }
 
 
-/* Responsive styles */
+
 @media (min-width: 320px) and (max-width: 480px) {
   .movie-item {
       flex: 1 1 100%; 
@@ -105,7 +105,7 @@
   }
 }
 
-/* Fade-in animation */
+
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -114,6 +114,7 @@
       opacity: 1;
   }
 }
+
 
 /* Modal styles */
 .modal {

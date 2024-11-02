@@ -61,7 +61,7 @@ const GenrePage = ({ wishlist, setWishlist, searchQuery }) => {
       <ul>
         {currentMovies.length > 0 ? (
           currentMovies.map((movie) => {
-            // Check if the movie is already in the wishlist
+            
             const isInWishlist = wishlist.some(wish => wish.id === movie.id);
             return (
               <li key={movie.id}>
@@ -78,7 +78,7 @@ const GenrePage = ({ wishlist, setWishlist, searchQuery }) => {
                       addToWishlist(movie);
                     }
                   }}
-                  style={{ cursor: 'pointer', fontSize: '24px' }} // Style for heart icon
+                  style={{ cursor: 'pointer', fontSize: '24px' }} 
                 >
                   {isInWishlist ? '❤️' : '🤍'}
                 </span>

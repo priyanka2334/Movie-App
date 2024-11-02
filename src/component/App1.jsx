@@ -9,7 +9,7 @@ const App1 = ({ wishlist, setWishlist }) => {
       <Routes>
         <Route
           path="/"
-          element={<MoviesPage wishlist={wishlist} setWishlist={setWishlist} />} // Pass props here
+          element={<MoviesPage wishlist={wishlist} setWishlist={setWishlist} />} 
         />
         <Route
           path="/favorites"
